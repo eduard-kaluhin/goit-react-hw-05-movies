@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { responses } from 'services/api';
-import { FilmList } from 'components/HomeList/HomeList';
+
 import { SearchBar } from 'components/SearchBar/SearchBar';
 import { useFetchMovies } from 'hooks/fetchApi';
+import { MoviesList } from 'components/MoviesList/MoviesList';
 
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -24,7 +25,7 @@ const Movies = () => {
   return (
     <main>
       <SearchBar onSubmit={handleSubmit} />
-      <FilmList error={error} isLoading={isLoading} movies={movies} />
+      <MoviesList error={error} isLoading={isLoading} movies={movies} />
     </main>
   );
 };

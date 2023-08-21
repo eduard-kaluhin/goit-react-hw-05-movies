@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { MoviesItem } from 'components/HomeItem/HomeItem';
+import { MoviesItem } from 'components/ MoviesItem/ MoviesItem';
 import { Ul } from './MoviesList.styled';
 export const MoviesList = ({ movies = [] }) => {
   const isVisible = Array.isArray(movies) && movies?.length > 0;
@@ -8,13 +8,13 @@ export const MoviesList = ({ movies = [] }) => {
     <>
       <Ul>
         {isVisible &&
-          movies.map(movie => <HomeItem key={movie.id} {...movie} />)}
+          movies.map(movie => <MoviesItem key={movie.id} {...movie} />)}
       </Ul>
     </>
   );
 };
 
-FilmList.propTypes = {
+MoviesList.propTypes = {
   results: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
