@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { MoviesItem } from 'components/ MoviesItem/ MoviesItem';
+import { MoviItem } from 'components/ MoviItem/ MoviItem';
 import { Ul } from './MoviesList.styled';
 export const MoviesList = ({ movies = [] }) => {
   const isVisible = Array.isArray(movies) && movies?.length > 0;
@@ -8,7 +8,7 @@ export const MoviesList = ({ movies = [] }) => {
     <>
       <Ul>
         {isVisible &&
-          movies.map(movie => <MoviesItem key={movie.id} {...movie} />)}
+          movies.map(movie => <MoviItem key={movie.id} {...movie} />)}
       </Ul>
     </>
   );

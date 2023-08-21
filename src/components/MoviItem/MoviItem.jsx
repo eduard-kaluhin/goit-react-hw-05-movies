@@ -9,7 +9,7 @@ const StyledLink = styled(NavLink)`
   font-size: 20px;
 `;
 
-export const MoviesItem = ({ title, name, id }) => {
+export const MoviItem = ({ title, name, id }) => {
   const location = useLocation();
 
   return (
@@ -21,7 +21,7 @@ export const MoviesItem = ({ title, name, id }) => {
   );
 };
 
-MoviesItem.propTypes = {
+MoviItem.propTypes = {
   title: PropTypes.string,
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
