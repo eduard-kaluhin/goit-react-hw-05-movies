@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { MoviItem } from 'components/ MoviItem/ MoviItem';
+import { MoviItem } from 'components/MoviItem/MoviItem';
 import { Ul } from './MoviesList.styled';
 export const MoviesList = ({ movies = [] }) => {
   const isVisible = Array.isArray(movies) && movies?.length > 0;
