@@ -1,8 +1,7 @@
-import { FilmList } from 'components/HomeList/HomeList';
-
 import { useFetchMovies } from 'hooks/fetchApi';
 import { responses } from 'services/api';
 import { useEffect } from 'react';
+import { MoviesList } from 'components/MoviesList/MoviesList';
 
 const Home = () => {
   const { isLoading, data, error, fetchApi } = useFetchMovies();
@@ -18,7 +17,7 @@ const Home = () => {
     <>
       <h2 style={{ marginLeft: `50px` }}>Trending today</h2>
       {isVisible && !error && (
-        <FilmList movies={movies} isLoading={isLoading} />
+        <MoviesList movies={movies} isLoading={isLoading} />
       )}
     </>
   );
